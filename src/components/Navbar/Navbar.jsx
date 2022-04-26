@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../logos/Group 1329.png'
+
 const Navbar = () => {
     return (
         <div className="w-4/5 mx-auto">
@@ -7,7 +9,7 @@ const Navbar = () => {
             <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 h-24 flex justify-center items-center">
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
                     <a href="https://flowbite.com" class="flex items-center">
-                        <img src={logo} class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+                        <img src={logo} className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
 
                     </a>
                     <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
@@ -31,7 +33,10 @@ const Navbar = () => {
                             </li>
 
                             <button className='mx-2 rounded-sm bg-[#3F90FC] w-24 h-8 text-white'>Register</button>
-                            <button className='mx-2 rounded-sm bg-[#434141] w-24 h-8 text-white'>Admin</button>
+                            <Link to="/admin">
+                                <button className='mx-2 rounded-sm bg-[#434141] w-24 h-8 text-white'>Admin</button>
+                            </Link>
+
 
                         </ul>
 
